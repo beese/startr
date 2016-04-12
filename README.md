@@ -1,2 +1,2 @@
 # startr
-generate your million dollar slogan
+generate your million dollar start up name, slogan, and logo
