@@ -1,13 +1,6 @@
 <html>
 	<head>
 		<title>//startr</title>
-		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-		<script>
-			angular.module('kristin', [])
-				.controller('audience', function ($scope) {
-					$scope.audience = [];
-				});
-		</script>
 	</head>
 
 	<body>
@@ -35,12 +28,6 @@
 		<p>generate your million dollar startup name</p>
 
 		<div ng-app="MyApp" ng-controller="MyController">
-			<h1 ng-show="audience.length > 0" ng-repeat="a in audience track by $index">{{a}}</h1>
-
-			</div>
-		</div>
-
-		<div ng-app="">
 			<h2>Category</h2>
 			<form>
 				<input type="checkbox" ng-model="ShowTravelKeys" ng-change="ShowHide()" /> Travel
