@@ -31,7 +31,18 @@
 			<h2>Category</h2>
 			<form>
 				<input type="checkbox" ng-model="ShowTravelKeys" ng-change="ShowHide()" /> Travel
+				<p>
+				<input type="checkbox" ng-model="ShowSportsKeys" ng-change="ShowHide()" /> Sports
+				<p>
+				<input type="checkbox" ng-model="ShowFinanceKeys" ng-change="ShowHide() " /> Finance
+				<p>
+				<input type="checkbox" ng-model="ShowFoodKeys" ng-change="ShowHide()" /> Food
+				<p>
+				<input type="checkbox" ng-model="ShowShoppingKeys" ng-change="ShowHide()" /> Shopping
 
+				<hr />
+
+				<h2>Keywords</h2>
 				<div ng-show="IsVisibleTravel">
 					<input type="checkbox" /> Airplane
 					<input type="checkbox" /> Car
@@ -39,10 +50,6 @@
 					<input type="checkbox" /> Hiking
 					<input type="checkbox" /> Map
 				</div>
-
-				<p>
-
-				<input type="checkbox" ng-model="ShowSportsKeys" ng-change="ShowHide()" /> Sports
 
 				<div ng-show="IsVisibleSports">
 					<input type="checkbox" /> Basketball
@@ -52,10 +59,6 @@
 					<input type="checkbox" /> Running
 				</div>
 
-
-				<p>
-				<input type="checkbox" ng-model="ShowFinanceKeys" ng-change="ShowHide() " /> Finance
-
 				<div ng-show="IsVisibleFinance">
 					<input type="checkbox" /> Money
 					<input type="checkbox" /> Banking
@@ -64,10 +67,6 @@
 					<input type="checkbox" /> Cash
 				</div>
 
-
-				<p>
-				<input type="checkbox" ng-model="ShowFoodKeys" ng-change="ShowHide()" /> Food
-
 				<div ng-show="IsVisibleFood">
 					<input type="checkbox" /> Eat
 					<input type="checkbox" /> Restaurant
@@ -75,10 +74,6 @@
 					<input type="checkbox" /> Drinks
 					<input type="checkbox" /> Diner
 				</div>
-
-
-				<p>
-				<input type="checkbox" ng-model="ShowShoppingKeys" ng-change="ShowHide()" /> Shopping
 
 				<div ng-show="IsVisibleShopping">
 					<input type="checkbox" /> Clothes
