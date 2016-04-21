@@ -1,12 +1,33 @@
 <html>
 	<head>
 		<title>//startr</title>
-		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 	</head>
+
 	<body>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+		<script type="text/javascript">
+	        var app = angular.module('MyApp', [])
+	        app.controller('MyController', function ($scope) {
+	            //This will hide the DIV by default.
+	            $scope.IsVisible = false;
+
+	            $scope.ShowHide = function () {
+	                //If DIV is visible it will be hidden and vice versa.
+	                $scope.IsVisibleTravel = $scope.ShowTravelKeys;
+	                $scope.IsVisibleSports = $scope.ShowSportsKeys;
+	                $scope.IsVisibleFinance = $scope.ShowFinanceKeys;
+	                $scope.IsVisibleFood = $scope.ShowFoodKeys;
+	                $scope.IsVisibleShopping = $scope.ShowShoppingKeys;
+	            }
+
+	        });
+	    </script>
+
 		<h1>//startr</h1>
 		<p>generate your million dollar startup name</p>
-		<div ng-app="">
+
+<!-- 		<div ng-app="MyApp" ng-controller="MyController">
 			<h2>Target Audience</h2>
 			<form>
 				<input type="checkbox" ng-model="myVar"> Kids
@@ -21,22 +42,70 @@
 			</form>
 			<h1 ng-show="myVar">KIDS </h1>
 			<h1 ng-show="myVar2">TEENS </h1>
+		</div> -->
 
-		</div>
-
-		<div ng-app="">
+		<div ng-app="MyApp" ng-controller="MyController">
 			<h2>Category</h2>
 			<form>
-				<input type="checkbox" ng-model="1myVar"> Travel
+				<input type="checkbox" ng-model="ShowTravelKeys" ng-change="ShowHide()" /> Travel
+
+				<div ng-show="IsVisibleTravel">
+					<input type="checkbox" /> Airplane
+					<input type="checkbox" /> Car
+					<input type="checkbox" /> Hotel
+					<input type="checkbox" /> Hiking
+					<input type="checkbox" /> Map
+				</div>
+
 				<p>
-				<input type="checkbox" ng-model="1myVar2"> Sports
+
+				<input type="checkbox" ng-model="ShowSportsKeys" ng-change="ShowHide()" /> Sports
+
+				<div ng-show="IsVisibleSports">
+					<input type="checkbox" /> Basketball
+					<input type="checkbox" /> Volleyball
+					<input type="checkbox" /> Hoop
+					<input type="checkbox" /> Swimming
+					<input type="checkbox" /> Running
+				</div>
+
+
 				<p>
-				<input type="checkbox" ng-model="1myVar3"> Finance
+				<input type="checkbox" ng-model="ShowFinanceKeys" ng-change="ShowHide() " /> Finance
+
+				<div ng-show="IsVisibleFinance">
+					<input type="checkbox" /> Money
+					<input type="checkbox" /> Banking
+					<input type="checkbox" /> Credit
+					<input type="checkbox" /> Spending
+					<input type="checkbox" /> Cash
+				</div>
+
+
 				<p>
-				<input type="checkbox" ng-model="1myVar4"> Food
+				<input type="checkbox" ng-model="ShowFoodKeys" ng-change="ShowHide()" /> Food
+
+				<div ng-show="IsVisibleFood">
+					<input type="checkbox" /> Eat
+					<input type="checkbox" /> Restaurant
+					<input type="checkbox" /> Bars
+					<input type="checkbox" /> Drinks
+					<input type="checkbox" /> Diner
+				</div>
+
+
 				<p>
-				<input type="checkbox" ng-model="1myVar5"> Shopping
-			</form>
+				<input type="checkbox" ng-model="ShowShoppingKeys" ng-change="ShowHide()" /> Shopping
+
+				<div ng-show="IsVisibleShopping">
+					<input type="checkbox" /> Clothes
+					<input type="checkbox" /> Stores
+					<input type="checkbox" /> Fashion
+					<input type="checkbox" /> Shoes
+					<input type="checkbox" /> Sale
+				</div>
+
+			</form>			
 		</div>
 	</body>
 </html>
