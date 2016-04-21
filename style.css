@@ -13,3 +13,8 @@ h2 {
 	font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
 	font-weight: 500;
 }
+
+img {
+	display: block;
+	margin: 0 auto;
+}

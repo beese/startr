@@ -2,7 +2,15 @@
 	<head>
 		<title>//startr</title>
 		<link type="text/css" rel="stylesheet" href = "style.css">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
 		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
 		<script type="text/javascript">
 	        var app = angular.module('MyApp', [])
 	        app.controller('MyController', function ($scope) {
@@ -23,14 +31,13 @@
 	</head>
 
 	<body>
+		
 
+		<div class="container" ng-app="MyApp" ng-controller="MyController">
+			<img src="startrLogoTake2transparent.png" alt="logo" align="middle">
 
-		<h1>//startr</h1>
-		<p>generate your million dollar startup name</p>
-
-		<div ng-app="MyApp" ng-controller="MyController">
 			<h2>Category</h2>
-			<form>
+			<form role = "form">
 				<p><input type="checkbox" ng-model="ShowTravelKeys" ng-change="ShowHide()" /> Travel</p>
 				<p><input type="checkbox" ng-model="ShowSportsKeys" ng-change="ShowHide()" /> Sports</p>
 				<p><input type="checkbox" ng-model="ShowFinanceKeys" ng-change="ShowHide() " /> Finance</p>
@@ -80,7 +87,9 @@
 					<input type="checkbox" /> Sale</p>
 				</div>
 
-			</form>			
+				<button type="submit" class="btn btn-default">Submit</button>
+
+			</form>	
 		</div>
 	</body>
 </html>
